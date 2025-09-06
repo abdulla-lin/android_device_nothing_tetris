@@ -15,7 +15,5 @@
      limitations under the License.
 -->
 <resources>
-    <bool name="config_prioritizeUpdateProcess">true</bool>
-    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/ProjectInfinity-X/official_devices/16/gapps/tetris.json</string>
-    <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/ProjectInfinity-X/official_devices/16/changelog/tetris.txt</string>
+     <!-- unecessary -->
 </resources>
