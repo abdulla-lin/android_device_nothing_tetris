@@ -147,6 +147,11 @@ PRODUCT_PACKAGES += \
     libhwc2onfbadapter \
     libdrm.vendor
 
+# Graphics shims
+PRODUCT_PACKAGES += \
+    libprocessgroup_shim.vendor \
+    libprocessgroup_shim
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
