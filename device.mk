@@ -149,7 +149,6 @@ PRODUCT_PACKAGES += \
 
 # Graphics shims
 PRODUCT_PACKAGES += \
-    libprocessgroup_shim.vendor \
     libprocessgroup_shim
 
 # DRM
