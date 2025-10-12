@@ -41,5 +41,3 @@ Matrixx_MAINTAINER := "abdulla"
 Matrixx_SUPPORTS_BLUR := true
 TARGET_HAS_UDFPS := true
 
-# GAPPS
-WITH_GAPPS := true
