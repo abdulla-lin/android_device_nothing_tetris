@@ -415,10 +415,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal-V1-ndk.vendor
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
