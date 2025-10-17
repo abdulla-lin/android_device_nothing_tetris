@@ -44,7 +44,12 @@
          Refer to autosuspend.h for details.
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
-
+    <bool name="config_enablePerfHint">true</bool>
+    <bool name="config_enableUiPerformanceMode">true</bool>
+    <integer name="config_perfHintAnimationBoostDurMs">48</integer>
+    <integer name="config_perfHintInputBoostDurMs">32</integer>
+    <bool name="config_sfUseAdpfHints">true</bool>
+    
     <!-- Power Management: Specifies whether to decouple the interactive state of the
          device from the display on/off state.
 
