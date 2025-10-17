@@ -12,6 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common infinity stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Enable ADPF pipeline for UI performance
+PRODUCT_PRODUCT_PROPERTIES += \
+persist.vendor.power.adpf.enable=true \
+ro.vendor.powerhal.adpf.enable=true
+
 # Inherit from tetris device
 $(call inherit-product, device/nothing/tetris/device.mk)
 
