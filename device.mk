@@ -83,6 +83,56 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
+# Performance tweaks - ADPF and Power HAL boosts
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.vendor.power.adpf.enable=true \
+    ro.vendor.powerhal.adpf.enable=true \
+    ro.vendor.powerhal.adpf.max_boost=2 \
+    ro.vendor.powerhal.adpf.cooldown_ms=500 \
+    ro.vendor.powerhal.launchBoostEnable=true \
+    ro.vendor.powerhal.animationBoostEnable=true \
+    ro.vendor.powerhal.inputBoostEnable=true
+
+# SurfaceFlinger optimizations for smoother animations
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.early.sf.duration=10500000 \
+    debug.sf.early.app.duration=16500000 \
+    debug.sf.late.sf.duration=10500000 \
+    debug.sf.late.app.duration=20500000 \
+    debug.sf.earlyGl.sf.duration=13500000 \
+    debug.sf.earlyGl.app.duration=21000000 \
+    debug.renderthread.skia.reduceopstasksplitting=true
+
+# Slightly faster animations without jarring effect  
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.window_animation_scale=0.9 \
+    persist.sys.transition_animation_scale=0.9 \
+    persist.sys.animator_duration_scale=0.9
+
+# Battery-efficient power boost frequencies and durations
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.powerhal.input_boost_freq_big=1600000 \
+    vendor.powerhal.input_boost_freq_little=1200000 \
+    vendor.powerhal.input_boost_ms=80 \
+    vendor.powerhal.launch_boost_freq_big=2000000 \
+    vendor.powerhal.launch_boost_freq_little=1400000 \
+    vendor.powerhal.launch_boost_ms=1500 \
+    vendor.powerhal.anim_boost_ms=250
+
+# Thermal cooperation and LMK tuning
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.thermal.launch_boost_allow=true \
+    vendor.thermal.interaction_boost_allow=true \
+    vendor.thermal.sustained_perf_cap=1 \
+    ro.lmk.use_minfree_levels=true \
+    ro.lmk.kill_heaviest_task=false \
+    ro.lmk.upgrade_pressure=92 \
+    ro.lmk.downgrade_pressure=72 \
+    ro.lmk.swap_free_low_percentage=15 \
+    ro.lmk.swap_util_max=95 \
+    persist.device_config.runtime_native.usap_pool_enabled=true
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.common-V1-ndk.vendor \
@@ -107,7 +157,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
+    frameworks/av//audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Bluetooth
