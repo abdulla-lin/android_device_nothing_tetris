@@ -78,7 +78,12 @@
         <item>3379,3</item>       <!-- 245 * 3515/255 = 3379 -->
         <item>3515,0</item>       <!-- 255 * 3515/255 = 3515 -->
     </string-array>
-
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <bool name="config_enablePerformanceHints">true</bool>
+    <bool name="config_enableInputPerfHints">true</bool>
+    <integer name="config_inputPerfHintDurationMs">24</integer>
+    <integer name="config_recentsAnimPerfHintDurationMs">96</integer>
+</resources>
     <!-- Color of the UDFPS Pressed view -->
     <color name="config_udfpsColor">#ffffe6</color>
 
