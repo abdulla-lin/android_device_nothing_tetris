@@ -127,7 +127,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.thermal.sustained_perf_cap=1 \
     ro.lmk.use_minfree_levels=true \
     ro.lmk.kill_heaviest_task=false \
-    ro.lmk.swap_util_max=95 \
     persist.device_config.runtime_native.usap_pool_enabled=true
 
 # Audio
