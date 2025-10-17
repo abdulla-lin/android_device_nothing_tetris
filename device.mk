@@ -127,9 +127,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.thermal.sustained_perf_cap=1 \
     ro.lmk.use_minfree_levels=true \
     ro.lmk.kill_heaviest_task=false \
-    ro.lmk.upgrade_pressure=92 \
-    ro.lmk.downgrade_pressure=72 \
-    ro.lmk.swap_free_low_percentage=15 \
     ro.lmk.swap_util_max=95 \
     persist.device_config.runtime_native.usap_pool_enabled=true
 
