@@ -382,6 +382,20 @@ PRODUCT_PACKAGES += \
     libmtkperf_client \
     libmtkperf_client_vendor
 
+# Set maintainer
+     MISTOS_MAINTAINER := "abdulla"
+
+# Enable GMS with mini package
+     WITH_GMS := false
+     TARGET_USES_MINI_GAPPS := false
+
+# Enable UI enhancements
+    TARGET_ENABLE_BLUR := true
+
+# Enable features
+    TARGET_SUPPORTS_QUICK_TAP := true
+    BYPASS_CHARGE_SUPPORTED := true
+
 # USB
 PRODUCT_PACKAGES += \
     android.frameworks.stats-V1-ndk.vendor \
