@@ -110,7 +110,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.common-V1-ndk.vendor \
-    andrtruerdware.audio.service \
+    android.hardware.audio.service \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl \
     audioclient-types-aidl-cpp.vendor \
