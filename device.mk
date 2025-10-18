@@ -23,31 +23,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Setup dalvik vm configs
 $(call inherit-product,frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# AviumUI common config
-$(call inherit-product, vendor/avium/config/avium.mk)
-
-# Build metadata
-AVIUM_BUILDTYPE := Unofficial
-AVIUM_VERSION_APPEND_TIME_OF_DAY := false
-
-# Maintainer shown in Settings > About phone
-AVIUM_MAINTAINER := abdulla
-
-# GMS configuration (pick ONE section)
-
-# 1) Vanilla (no GApps)
-WITH_GMS := false
-# (Optional) still allow Google IME toggles if you later enable GMS
-TARGET_INCLUDE_GOOGLEIME := false
-TARGET_GOOGLEIME_OVERRIDE_IME := false
-
-# 2) GApps (comment the vanilla section above and use this instead)
-# WITH_GMS := true
-# GMS_TYPE := CORE   # or FULL
-# TARGET_INCLUDE_GOOGLEIME := true
-# TARGET_GOOGLEIME_OVERRIDE_IME := true
-# A/B
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
