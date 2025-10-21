@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/tetris-vendor.mk
+    $(LOCAL_DIR)/voltage_tetris.mk
