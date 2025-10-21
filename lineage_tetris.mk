@@ -17,6 +17,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 persist.vendor.power.adpf.enable=true \
 ro.vendor.powerhal.adpf.enable=true
 
+#GMS FLAG
+WITH_GMS=true
+
 # Inherit from tetris device
 $(call inherit-product, device/nothing/tetris/device.mk)
 
