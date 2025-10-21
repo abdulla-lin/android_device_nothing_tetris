@@ -17,6 +17,22 @@ PRODUCT_PRODUCT_PROPERTIES += \
 persist.vendor.power.adpf.enable=true \
 ro.vendor.powerhal.adpf.enable=true
 
+Add the following variables:
+
+# Lunch banner maintainer variable
+RISING_MAINTAINER="abdulla"
+
+#gms
+WITH_GMS := false
+# Disable/enable blur support, false by default
+TARGET_ENABLE_BLUR := true
+
+# Whether to ship aperture camera, false by default
+PRODUCT_NO_CAMERA := false
+
+# Whether to ship lawnchair launcher, false by default
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+
 # Inherit from tetris device
 $(call inherit-product, device/nothing/tetris/device.mk)
 
