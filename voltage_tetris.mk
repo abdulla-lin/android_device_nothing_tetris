@@ -10,33 +10,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common infinity stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Enable ADPF pipeline for UI performance
 PRODUCT_PRODUCT_PROPERTIES += \
 persist.vendor.power.adpf.enable=true \
 ro.vendor.powerhal.adpf.enable=true
 
-Add the following variables:
-
-# Lunch banner maintainer variable
-RISING_MAINTAINER="abdulla"
-
 #gms
 WITH_GMS := false
-# Disable/enable blur support, false by default
-TARGET_ENABLE_BLUR := true
-
-# Whether to ship aperture camera, false by default
-PRODUCT_NO_CAMERA := false
-
-# Whether to ship lawnchair launcher, false by default
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 
 # Inherit from tetris device
 $(call inherit-product, device/nothing/tetris/device.mk)
 
-PRODUCT_NAME := lineage_tetris
+PRODUCT_NAME := voltage_tetris
 PRODUCT_DEVICE := tetris
 PRODUCT_BRAND := Nothing
 PRODUCT_MANUFACTURER := Nothing
