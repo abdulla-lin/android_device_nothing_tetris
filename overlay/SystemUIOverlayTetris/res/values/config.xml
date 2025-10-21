@@ -21,7 +21,7 @@
     <bool name="doze_display_state_supported">true</bool>
 
     <!-- Whether to enable framework dimming for UDFPS -->
-    <bool name="config_udfpsFrameworkDimming">true</bool>
+    <bool name="config_udfpsFrameworkDimming">false</bool>
 
     <!-- Array of brightness-alpha lut for framework dimming -->
     <string-array name="config_udfpsDimmingBrightnessAlphaArray" translatable="false">
