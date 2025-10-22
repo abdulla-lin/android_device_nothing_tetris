@@ -21,7 +21,7 @@
     <bool name="doze_display_state_supported">true</bool>
 
     <!-- Whether to enable framework dimming for UDFPS -->
-    <bool name="config_udfpsFrameworkDimming">false</bool>
+    <bool name="config_udfpsFrameworkDimming">true</bool>
 
     <!-- Array of brightness-alpha lut for framework dimming -->
     <string-array name="config_udfpsDimmingBrightnessAlphaArray" translatable="false">
@@ -78,7 +78,17 @@
         <item>3379,3</item>
         <item>3515,0</item>
     </string-array>
+    
+    <!-- Make surroundings darker so global GHBM isn’t perceived as a flash -->
+<item name="config_udfpsDimAmount" format="float">0.75</item>
 
+<!-- UDFPS geometry: replace with real values from stock -->
+<integer name="config_udfpsSensorX">540</integer>
+<integer name="config_udfpsSensorY">2240</integer>
+<integer name="config_udfpsSensorRadius">120</integer>
+
+<!-- Keep your existing LUT in place; ensure it’s present in this file too -->
+<!-- If your LUT lives in a separate overlay file already, leave it there -->
     <!-- UI performance hints -->
     <bool name="config_enablePerformanceHints">true</bool>
     <bool name="config_enableInputPerfHints">true</bool>
