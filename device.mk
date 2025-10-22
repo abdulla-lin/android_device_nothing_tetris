@@ -20,11 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
-#udfps fix
-PRODUCT_COPY_FILES += \
-    device/nothing/tetris/rootdir/etc/init.udfps_hbm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.udfps_hbm.rc \
-    device/nothing/tetris/rootdir/bin/udfps_hbm.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/udfps_hbm.sh
-
 # Setup dalvik vm configs
 $(call inherit-product,frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
