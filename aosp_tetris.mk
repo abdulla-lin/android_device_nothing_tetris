@@ -23,7 +23,7 @@ WITH_GMS := false
 # Inherit from tetris device
 $(call inherit-product, device/nothing/tetris/device.mk)
 
-PRODUCT_NAME := clover_tetris
+PRODUCT_NAME := aosp_tetris
 PRODUCT_DEVICE := tetris
 PRODUCT_BRAND := Nothing
 PRODUCT_MANUFACTURER := Nothing
