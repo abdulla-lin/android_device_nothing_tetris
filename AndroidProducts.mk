@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/clover_tetris.mk
+    $(LOCAL_DIR)/aosp_tetris.mk
