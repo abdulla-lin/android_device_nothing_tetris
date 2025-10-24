@@ -528,7 +528,7 @@
       {
         "PowerHint": "INTERACTION",
         "Node": "GpuPwrLevel",
-        "Duration": 1000,
+        "Duration": 2000,
         "Value": "9"
       },
       {
