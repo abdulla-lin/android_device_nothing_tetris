@@ -54,12 +54,13 @@ on init
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
 
-# update cpus for cpuset cgroup
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 0-7
+# cpusets tuned for Dimensity 7300
     write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 4-7
     write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/restricted/cpus 0-3
 
 #NT_EDIT BEE-447 add for aac richtap vibration begin
     chmod 0666 proc/haptic/f0
