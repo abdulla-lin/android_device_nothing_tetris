@@ -14,8 +14,8 @@ $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Enable ADPF pipeline for UI performance
 PRODUCT_PRODUCT_PROPERTIES += \
-persist.vendor.power.adpf.enable=true \
-ro.vendor.powerhal.adpf.enable=true
+persist.vendor.power.adpf.enable=false \
+ro.vendor.powerhal.adpf.enable=false
 
 #gms
 WITH_GMS := false
