@@ -1,4 +1,4 @@
-/*
+c/*
  * SPDX-FileCopyrightText: 2020 The Android Open Source Project
  * SPDX-FileCopyrightText: 2023 The LineageOS Project
  *
