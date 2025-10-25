@@ -18,8 +18,8 @@ persist.vendor.power.adpf.enable=true \
 ro.vendor.powerhal.adpf.enable=true
 
 #gms
-TARGET_BUILD_GAPPS := false
-WITH_GMS := false
+TARGET_BUILD_GAPPS := true
+WITH_GMS := true
 
 # Inherit from tetris device
 $(call inherit-product, device/nothing/tetris/device.mk)
